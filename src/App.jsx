@@ -1,10 +1,17 @@
-function App() {
+import { Route, Routes } from "react-router-dom";
 
+// import Home from "./pages/Home";
+import Sidebar from "./components/Sidebar";
+import PokemonDetails from "./components/PokemonDetails";
+function App() {
   return (
-    <>
-      <h1 className="text-slate-700 text-3xl">Hola Mundo!</h1>
-    </>
-  )
+    <div>
+      <Routes>
+        <Route path="/" element={<Sidebar />} />
+        <Route path="/pokemon/:pokemonName" element={<PokemonDetails />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
