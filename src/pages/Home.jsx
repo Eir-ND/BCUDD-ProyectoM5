@@ -1,13 +1,12 @@
-// import Pokemon from "../components/Pokemon"
-// import Sidebar from "../components/Sidebar";
+// import Pokemon from "../components/Pokemon";
+import Sidebar from "../components/Sidebar";
 
-// function Home() {
-//   return (
-//     <div>
-//       <Sidebar />
-//       {/* <Pokemon /> */}
-//     </div>
-//   );
-// }
+function Home() {
+  return (
+    <div>
+      <Sidebar />
+    </div>
+  );
+}
 
-// export default Home;
+export default Home;
