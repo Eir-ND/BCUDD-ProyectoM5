@@ -13,7 +13,10 @@ function Sidebar() {
 
   return (
     <>
-      <div className="w-[250px] h-full py-20 px-2 bg-[#f8f8f8] shadow-[2px_0_5px_rgba(0, 0, 0, 0.1)] fixed overflow-y-auto">
+      <div className="w-[250px] h-full pb-20 px-2 bg-[#f8f8f8] shadow-[2px_0_5px_rgba(0, 0, 0, 0.1)] fixed overflow-y-auto">
+        <Link to="/">
+          <img src="/logo.png" alt="Pokemon logo" className="w-fit" />
+        </Link>
         {!pokemons.length ? (
           <div className="text-[18px] text-[#888] text-center mt-[50vh]">
             Loading...
@@ -21,15 +24,14 @@ function Sidebar() {
         ) : (
           <ul className="list-none p-0 m-0">
             {pokemons.map((pkmn, index) => (
-              <li
-                key={index}
-                className="w-full p-[10px] text-[16px] border-b border-gray-300 cursor-pointer transition duration-300 hover:bg-custom-gray text-justify active:bg-neutral-600 focus:bg-neutral-500"
-              >
-                <Link to={`/pokemon/${pkmn.name}`}>
+              <Link to={`/pokemon/${pkmn.name}`} key={index}>
+                <li className="w-full p-[10px] text-[16px] border-b border-gray-300 cursor-pointer transition duration-300 hover:bg-custom-gray text-justify active:bg-neutral-600 focus:bg-neutral-500 flex justify-between">
                   No.{index + 1}{" "}
-                  {pkmn.name.charAt(0).toUpperCase() + pkmn.name.slice(1)}
-                </Link>
-              </li>
+                  <span>
+                    {pkmn.name.charAt(0).toUpperCase() + pkmn.name.slice(1)}
+                  </span>
+                </li>
+              </Link>
             ))}
           </ul>
         )}

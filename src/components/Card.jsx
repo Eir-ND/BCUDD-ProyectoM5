@@ -12,7 +12,8 @@ const Card = ({ details }) => {
             alt={`${name} sprite`}
             className="w-48 h-48 object-contain"
           />
-          <div className="ml-4">
+          {/* name, types, stats */}
+          <div className="ml-4 w-[340px]">
             <h2 className="text-2xl font-bold capitalize">{name}</h2>
             <div className="mt-2">
               <h3 className="text-lg font-semibold">Types:</h3>
@@ -33,7 +34,15 @@ const Card = ({ details }) => {
                 {stats.map((stat, index) => (
                   <div key={index} className="flex justify-between text-sm">
                     <span className="capitalize">{stat.stat.name}:</span>
-                    <span>{stat.base_stat}</span>
+                    <span>
+                      {stat.base_stat}
+                      <div className="h-1 w-[200px] bg-gray-500">
+                        <div
+                          className="h-1 bg-cyan-600"
+                          style={{ width: `${stat.base_stat / 2}%` }}
+                        ></div>
+                      </div>
+                    </span>
                   </div>
                 ))}
               </div>
