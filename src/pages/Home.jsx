@@ -1,10 +1,10 @@
 // import Pokemon from "../components/Pokemon";
-import Sidebar from "../components/Sidebar";
+// import Sidebar from "../components/Sidebar";
 
 function Home() {
   return (
     <div>
-      <Sidebar />
+      <h1>HOMEEEEEEE</h1>
     </div>
   );
 }

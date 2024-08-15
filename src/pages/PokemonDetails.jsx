@@ -12,12 +12,13 @@ const PokemonDetails = () => {
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, [pokemonName]);
-  console.log(details);
 
   return (
     <div>
-      <h1>Pokemon Details</h1>
-      <Link to="/">Back</Link>
+      <h1 className="text-center">Pokemon Details</h1>
+      <Link to="/" className="center">
+        Back
+      </Link>
 
       {!details.name ? <Loading /> : <Card details={details} />}
     </div>

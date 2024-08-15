@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-my-image bg-cover bg-no-repeat w-screen h-screen;
+}
