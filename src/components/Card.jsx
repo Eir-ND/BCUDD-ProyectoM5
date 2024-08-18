@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// import Loading from "./Loading";
 
 import Loading from "./Loading";
 
