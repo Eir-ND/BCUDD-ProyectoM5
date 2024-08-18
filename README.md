@@ -28,7 +28,7 @@ $ npm install
 $ npm run dev
 ```
 
-## ## Requerimientos del proyecto.
+## Requerimientos del proyecto.
 
 REACT
 
