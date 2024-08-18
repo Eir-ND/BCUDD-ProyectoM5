@@ -8,7 +8,7 @@ Para esta aplicación se utilizará la API de Pokemon: [PokeAPI](https://pokeapi
 
 ## Link en producción
 
-Puede ir a la app en producción mediante el siguiente LINK o realizazr la instalación mediante el siguiente item.
+Puede ir a la app en producción mediante el siguiente [LINK](https://bcudd-proyectom5.onrender.com) o realizar la instalación mediante el siguiente item.
 
 ## Instalación
 
