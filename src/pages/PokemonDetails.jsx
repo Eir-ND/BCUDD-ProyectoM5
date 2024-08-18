@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
 import Card from "../components/Card";
+import { ErrorBoundary } from "react-error-boundary";
 
 const PokemonDetails = () => {
   const { pokemonName } = useParams();
@@ -14,13 +15,18 @@ const PokemonDetails = () => {
   }, [pokemonName]);
 
   return (
-    <div>
+    <div className="ml-[250px] flex flex-col justify-center items-center h-screen">
       <h1 className="text-center">Pokemon Details</h1>
-      <Link to="/" className="center">
-        Back
-      </Link>
 
-      {!details.name ? <Loading /> : <Card details={details} />}
+      <div className="justify-center">
+        {!details.name ? (
+          <Loading />
+        ) : (
+          <ErrorBoundary fallback={<div>Something went wrong</div>}>
+            <Card details={details} />
+          </ErrorBoundary>
+        )}
+      </div>
     </div>
   );
 };

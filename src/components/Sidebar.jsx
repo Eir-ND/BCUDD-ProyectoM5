@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Loading from "./Loading";
 
 function Sidebar() {
   const [pokemons, setPokemons] = useState([]);
@@ -19,7 +20,7 @@ function Sidebar() {
         </Link>
         {!pokemons.length ? (
           <div className="text-[18px] text-[#888] text-center mt-[50vh]">
-            Loading...
+            <Loading />
           </div>
         ) : (
           <ul className="list-none p-0 m-0">
