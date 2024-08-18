@@ -15,10 +15,8 @@ const PokemonDetails = () => {
   }, [pokemonName]);
 
   return (
-    <div className="ml-[250px] flex flex-col justify-center items-center h-screen">
-      <h1 className="text-center">Pokemon Details</h1>
-
-      <div className="justify-center">
+    <div className="ml-[250px] flex flex-col justify-center items-center h-auto min-h-screen w-auto min-w-fit">
+      <div className="mb-24">
         {!details.name ? (
           <Loading />
         ) : (
